@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter Demo</title>
+  </head>
+  <body>
+    <h2>filterToDateAndTime过滤器</h2>
+    <h3>filterToDateAndTime[默认参数]</h3>
+    <div id="filterToDateAndTime1"></div>
+    <h3>filterToDateAndTime['Date','/']</h3>
+    <div id="filterToDateAndTime2"></div>
+    <h3>filterToDateAndTime['Time']</h3>
+    <div id="filterToDateAndTime3"></div>
+    <h2>filterToDecimal过滤器</h2>
+    <h3>filterToDecimal[0.05102,默认参数]</h3>
+    <div id="filterToDecimal1"></div>
+    <h3>filterToDecimal[0.05102,2]</h3>
+    <div id="filterToDecimal2"></div>
+    <h3>filterToDecimal[0.05102,3]</h3>
+    <div id="filterToDecimal3"></div>
+    <h3>filterToDecimal[0.05102,4]</h3>
+    <div id="filterToDecimal4"></div>
+    <h3>filterToDecimal[0.05102,5]</h3>
+    <div id="filterToDecimal5"></div>
+    <h3>filterToDecimal[0.05102,6]</h3>
+    <div id="filterToDecimal6"></div>
+
+    <h2>filterToSystem过滤器</h2>
+    <h3>filterToSystem[100,默认参数]</h3>
+    <div id="filterToSystem1"></div>
+    <h3>filterToSystem[999,默认参数]</h3>
+    <div id="filterToSystem2"></div>
+    <h3>filterToSystem[1000,默认参数]</h3>
+    <div id="filterToSystem3"></div>
+    <h3>filterToSystem[99,'cm','m',100]</h3>
+    <div id="filterToSystem4"></div>
+    <h3>filterToSystem[100,'cm','m',100]</h3>
+    <div id="filterToSystem5"></div>
+
+    <h2>filterToSeparation过滤器</h2>
+    <h3>filterToSeparation[1000000,默认参数]</h3>
+    <div id="filterToSeparation1"></div>
+    <h3>filterToSeparation[1000000,2,'-']</h3>
+    <div id="filterToSeparation2"></div>
+
+    <h2>filterToHide过滤器</h2>
+    <h3>filterToHide[1000000,2,4,默认参数]</h3>
+    <div id="filterToHide1"></div>
+    <h3>filterToHide[1000000,2,4,'#']</h3>
+    <div id="filterToHide2"></div>
+  <script src="/dist/filter.min.js"></script></body>
+  <script>
+    window.onload = function () {
+      var filterToDateAndTimeElem1 = document.getElementById(
+        "filterToDateAndTime1"
+      );
+      var filterToDateAndTimeElem2 = document.getElementById(
+        "filterToDateAndTime2"
+      );
+      var filterToDateAndTimeElem3 = document.getElementById(
+        "filterToDateAndTime3"
+      );
+      filterToDateAndTimeElem1.innerHTML = Filters.filterToDateAndTime(
+        new Date()
+      );
+      filterToDateAndTimeElem2.innerHTML = Filters.filterToDateAndTime(
+        new Date(),
+        "Date",
+        "/"
+      );
+      filterToDateAndTimeElem3.innerHTML = Filters.filterToDateAndTime(
+        new Date(),
+        "Time"
+      );
+
+      var filterToDecimalElem1 = document.getElementById("filterToDecimal1");
+      var filterToDecimalElem2 = document.getElementById("filterToDecimal2");
+      var filterToDecimalElem3 = document.getElementById("filterToDecimal3");
+      var filterToDecimalElem4 = document.getElementById("filterToDecimal4");
+      var filterToDecimalElem5 = document.getElementById("filterToDecimal5");
+      var filterToDecimalElem6 = document.getElementById("filterToDecimal6");
+      filterToDecimalElem1.innerHTML = Filters.filterToDecimal(0.05102);
+      filterToDecimalElem2.innerHTML = Filters.filterToDecimal(
+        0.05102,
+        2
+      );
+      filterToDecimalElem3.innerHTML = Filters.filterToDecimal(
+        0.05102,
+        3
+      );
+      filterToDecimalElem4.innerHTML = Filters.filterToDecimal(
+        0.05102,
+        4
+      );
+      filterToDecimalElem5.innerHTML = Filters.filterToDecimal(
+        0.05102,
+        5
+      );
+      filterToDecimalElem6.innerHTML = Filters.filterToDecimal(
+        0.05102,
+        6
+      );
+
+      var filterToSystem1Elem = document.getElementById("filterToSystem1");
+      var filterToSystem2Elem = document.getElementById("filterToSystem2");
+      var filterToSystem3Elem = document.getElementById("filterToSystem3");
+      var filterToSystem4Elem = document.getElementById("filterToSystem4");
+      var filterToSystem5Elem = document.getElementById("filterToSystem5");
+      filterToSystem1Elem.innerHTML = Filters.filterToSystem(100);
+      filterToSystem2Elem.innerHTML = Filters.filterToSystem(999);
+      filterToSystem3Elem.innerHTML = Filters.filterToSystem(1000);
+      filterToSystem4Elem.innerHTML = Filters.filterToSystem(
+        99,
+        "cm",
+        "m",
+        100
+      );
+      filterToSystem5Elem.innerHTML = Filters.filterToSystem(
+        100,
+        "cm",
+        "m",
+        100
+      );
+
+      var filterToSeparation1Elem = document.getElementById(
+        "filterToSeparation1"
+      );
+      var filterToSeparation2Elem = document.getElementById(
+        "filterToSeparation2"
+      );
+      filterToSeparation1Elem.innerHTML = Filters.filterToSeparation(
+        1000000
+      );
+      filterToSeparation2Elem.innerHTML = Filters.filterToSeparation(
+        1000000,
+        2,
+        "-"
+      );
+
+      var filterToHide1Elem = document.getElementById("filterToHide1");
+      var filterToHide2Elem = document.getElementById("filterToHide2");
+      filterToHide1Elem.innerHTML = Filters.filterToHide(1000000, 2, 4);
+      filterToHide2Elem.innerHTML = Filters.filterToHide(1000000, 2, 4, "#");
+    };
+  </script>
+</html>
