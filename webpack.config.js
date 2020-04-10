@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"), //输出路径，就是上步骤中新建的dist目录，
     publicPath: "/dist/",
-    filename: "filter.min.js",
+    filename: "filters.min.js",
     library: "Filters",
     libraryExport: "default",
     libraryTarget: "umd",
@@ -27,7 +27,7 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
-  mode: "development",
+  mode: "production",
   devServer: {
     //   搭建服务器的文件夹
     contentBase: path.resolve(__dirname, "dist"),

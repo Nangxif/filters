@@ -1,4 +1,4 @@
-# filter
+# filters
 
 一个过滤器集
 
@@ -59,3 +59,29 @@
 ### 三、导入及初始化
 
 1.可以在vue中作为过滤器使用
+
+```javascript
+//按需注册
+import Filters from "@nangxif/filters";
+Vue.filter("filterToDateAndTime", Filters.filterToDateAndTime);
+
+//一键注册
+import Filters from "@nangxif/filters";
+Object.keys(Filters).forEach(key => {
+  Vue.filter(key, Filters[key]);
+});
+
+//eg:
+{{ new Date() | filterToDateAndTime }}
+```
+
+2.在js中使用
+
+```html
+<script src="filters.min.js"></script>
+
+<script>
+Filters.filterToSystem(99,"cm","m",100);
+</script>
+```
+
