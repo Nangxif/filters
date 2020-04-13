@@ -123,7 +123,7 @@ function filterToTextTransform(data, type = 'AllInitialUpper') {
   if (type === 'AllInitialUpper' || type === 'AllInitialLower') {
     result = strArray.reduce((total, item) => {
       if (item[0] !== undefined) {
-        if (symbol.includes(item[0])) {
+        if (symbol.includes(item[0])&&item[1]) {
           return `${total}${item[0]}${
             type == 'AllInitialUpper'
               ? item[1].toUpperCase()
@@ -152,6 +152,8 @@ function filterToTextTransform(data, type = 'AllInitialUpper') {
         ? dataCopy.slice(0, 1).toUpperCase()
         : dataCopy.slice(0, 1).toLowerCase()
     }${dataCopy.slice(1)}`;
+  } else if (type === 'Upper' || type === 'Lower') {
+    result = type === 'Upper' ? dataCopy.toUpperCase() : dataCopy.toLowerCase();
   }
   return result.trim();
 }

@@ -54,8 +54,18 @@
     <div id="filterToHide2"></div>
 
     <h2>filterToTextTransform过滤器</h2>
-    <h3>filterToTextTransform['i am a programmer',默认参数]</h3>
+    <h3>filterToTextTransform[默认参数]</h3>
     <div id="filterToTextTransform1"></div>
+    <h3>filterToTextTransform[AllInitialLower]</h3>
+    <div id="filterToTextTransform2"></div>
+    <h3>filterToTextTransform[InitialUpper]</h3>
+    <div id="filterToTextTransform3"></div>
+    <h3>filterToTextTransform[InitialLower]</h3>
+    <div id="filterToTextTransform4"></div>
+    <h3>filterToTextTransform[Upper]</h3>
+    <div id="filterToTextTransform5"></div>
+    <h3>filterToTextTransform[Lower]</h3>
+    <div id="filterToTextTransform6"></div>
   </body>
   <script>
     window.onload = function () {
@@ -159,7 +169,17 @@
 
 
       var filterToTextTransform1Elem = document.getElementById('filterToTextTransform1');
-      filterToTextTransform1Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'InitialUpper');
+      var filterToTextTransform2Elem = document.getElementById('filterToTextTransform2');
+      var filterToTextTransform3Elem = document.getElementById('filterToTextTransform3');
+      var filterToTextTransform4Elem = document.getElementById('filterToTextTransform4');
+      var filterToTextTransform5Elem = document.getElementById('filterToTextTransform5');
+      var filterToTextTransform6Elem = document.getElementById('filterToTextTransform6');
+      filterToTextTransform1Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`);
+      filterToTextTransform2Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? I   am   a   programmer \n ! but i dont know`,'AllInitialLower');
+      filterToTextTransform3Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'InitialUpper');
+      filterToTextTransform4Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'InitialLower');
+      filterToTextTransform5Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'Upper');
+      filterToTextTransform6Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'Lower');
     };
   </script>
 </html>
