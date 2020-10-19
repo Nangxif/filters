@@ -66,120 +66,150 @@
     <div id="filterToTextTransform5"></div>
     <h3>filterToTextTransform[Lower]</h3>
     <div id="filterToTextTransform6"></div>
+
+    <h2>filterToSort过滤器</h2>
+    <h3>filterToSort[[2,1,3],默认参数]</h3>
+    <div id="filterToSort1"></div>
+    <h3>filterToSort[[{order:2},{order:3},{order:1}],'descending','order']</h3>
+    <div id="filterToSort2"></div>
   </body>
   <script>
     window.onload = function () {
       var filterToDateAndTimeElem1 = document.getElementById(
-        "filterToDateAndTime1"
+        'filterToDateAndTime1'
       );
       var filterToDateAndTimeElem2 = document.getElementById(
-        "filterToDateAndTime2"
+        'filterToDateAndTime2'
       );
       var filterToDateAndTimeElem3 = document.getElementById(
-        "filterToDateAndTime3"
+        'filterToDateAndTime3'
       );
       var filterToDateAndTimeElem4 = document.getElementById(
-        "filterToDateAndTime4"
+        'filterToDateAndTime4'
       );
       filterToDateAndTimeElem1.innerHTML = Filters.filterToDateAndTime(
         new Date()
       );
       filterToDateAndTimeElem2.innerHTML = Filters.filterToDateAndTime(
         new Date(),
-        "Date",
-        "/"
+        'Date',
+        '/'
       );
       filterToDateAndTimeElem3.innerHTML = Filters.filterToDateAndTime(
         new Date(),
-        "Time"
+        'Time'
       );
       filterToDateAndTimeElem4.innerHTML = Filters.filterToDateAndTime(
         new Date(),
-        "Week"
+        'Week'
       );
 
-      var filterToDecimalElem1 = document.getElementById("filterToDecimal1");
-      var filterToDecimalElem2 = document.getElementById("filterToDecimal2");
-      var filterToDecimalElem3 = document.getElementById("filterToDecimal3");
-      var filterToDecimalElem4 = document.getElementById("filterToDecimal4");
-      var filterToDecimalElem5 = document.getElementById("filterToDecimal5");
-      var filterToDecimalElem6 = document.getElementById("filterToDecimal6");
+      var filterToDecimalElem1 = document.getElementById('filterToDecimal1');
+      var filterToDecimalElem2 = document.getElementById('filterToDecimal2');
+      var filterToDecimalElem3 = document.getElementById('filterToDecimal3');
+      var filterToDecimalElem4 = document.getElementById('filterToDecimal4');
+      var filterToDecimalElem5 = document.getElementById('filterToDecimal5');
+      var filterToDecimalElem6 = document.getElementById('filterToDecimal6');
       filterToDecimalElem1.innerHTML = Filters.filterToDecimal(0.05102);
-      filterToDecimalElem2.innerHTML = Filters.filterToDecimal(
-        0.05102,
-        2
-      );
-      filterToDecimalElem3.innerHTML = Filters.filterToDecimal(
-        0.05102,
-        3
-      );
-      filterToDecimalElem4.innerHTML = Filters.filterToDecimal(
-        0.05102,
-        4
-      );
-      filterToDecimalElem5.innerHTML = Filters.filterToDecimal(
-        0.05102,
-        5
-      );
-      filterToDecimalElem6.innerHTML = Filters.filterToDecimal(
-        0.05102,
-        6
-      );
+      filterToDecimalElem2.innerHTML = Filters.filterToDecimal(0.05102, 2);
+      filterToDecimalElem3.innerHTML = Filters.filterToDecimal(0.05102, 3);
+      filterToDecimalElem4.innerHTML = Filters.filterToDecimal(0.05102, 4);
+      filterToDecimalElem5.innerHTML = Filters.filterToDecimal(0.05102, 5);
+      filterToDecimalElem6.innerHTML = Filters.filterToDecimal(0.05102, 6);
 
-      var filterToSystem1Elem = document.getElementById("filterToSystem1");
-      var filterToSystem2Elem = document.getElementById("filterToSystem2");
-      var filterToSystem3Elem = document.getElementById("filterToSystem3");
-      var filterToSystem4Elem = document.getElementById("filterToSystem4");
-      var filterToSystem5Elem = document.getElementById("filterToSystem5");
+      var filterToSystem1Elem = document.getElementById('filterToSystem1');
+      var filterToSystem2Elem = document.getElementById('filterToSystem2');
+      var filterToSystem3Elem = document.getElementById('filterToSystem3');
+      var filterToSystem4Elem = document.getElementById('filterToSystem4');
+      var filterToSystem5Elem = document.getElementById('filterToSystem5');
       filterToSystem1Elem.innerHTML = Filters.filterToSystem(100);
       filterToSystem2Elem.innerHTML = Filters.filterToSystem(999);
       filterToSystem3Elem.innerHTML = Filters.filterToSystem(1000);
       filterToSystem4Elem.innerHTML = Filters.filterToSystem(
         99,
-        "cm",
-        "m",
+        'cm',
+        'm',
         100
       );
       filterToSystem5Elem.innerHTML = Filters.filterToSystem(
         100,
-        "cm",
-        "m",
+        'cm',
+        'm',
         100
       );
 
       var filterToSeparation1Elem = document.getElementById(
-        "filterToSeparation1"
+        'filterToSeparation1'
       );
       var filterToSeparation2Elem = document.getElementById(
-        "filterToSeparation2"
+        'filterToSeparation2'
       );
-      filterToSeparation1Elem.innerHTML = Filters.filterToSeparation(
-        1000000
-      );
+      filterToSeparation1Elem.innerHTML = Filters.filterToSeparation(1000000);
       filterToSeparation2Elem.innerHTML = Filters.filterToSeparation(
         1000000,
         2,
-        "-"
+        '-'
       );
 
-      var filterToHide1Elem = document.getElementById("filterToHide1");
-      var filterToHide2Elem = document.getElementById("filterToHide2");
+      var filterToHide1Elem = document.getElementById('filterToHide1');
+      var filterToHide2Elem = document.getElementById('filterToHide2');
       filterToHide1Elem.innerHTML = Filters.filterToHide(1000000, 2, 4);
-      filterToHide2Elem.innerHTML = Filters.filterToHide(1000000, 2, 4, "#");
+      filterToHide2Elem.innerHTML = Filters.filterToHide(1000000, 2, 4, '#');
 
+      var filterToTextTransform1Elem = document.getElementById(
+        'filterToTextTransform1'
+      );
+      var filterToTextTransform2Elem = document.getElementById(
+        'filterToTextTransform2'
+      );
+      var filterToTextTransform3Elem = document.getElementById(
+        'filterToTextTransform3'
+      );
+      var filterToTextTransform4Elem = document.getElementById(
+        'filterToTextTransform4'
+      );
+      var filterToTextTransform5Elem = document.getElementById(
+        'filterToTextTransform5'
+      );
+      var filterToTextTransform6Elem = document.getElementById(
+        'filterToTextTransform6'
+      );
+      filterToTextTransform1Elem.innerHTML = Filters.filterToTextTransform(
+        `i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`
+      );
+      filterToTextTransform2Elem.innerHTML = Filters.filterToTextTransform(
+        `i   am   a   programmer  !but i dont know? I   am   a   programmer \n ! but i dont know`,
+        'AllInitialLower'
+      );
+      filterToTextTransform3Elem.innerHTML = Filters.filterToTextTransform(
+        `i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,
+        'InitialUpper'
+      );
+      filterToTextTransform4Elem.innerHTML = Filters.filterToTextTransform(
+        `i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,
+        'InitialLower'
+      );
+      filterToTextTransform5Elem.innerHTML = Filters.filterToTextTransform(
+        `i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,
+        'Upper'
+      );
+      filterToTextTransform6Elem.innerHTML = Filters.filterToTextTransform(
+        `i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,
+        'Lower'
+      );
 
-      var filterToTextTransform1Elem = document.getElementById('filterToTextTransform1');
-      var filterToTextTransform2Elem = document.getElementById('filterToTextTransform2');
-      var filterToTextTransform3Elem = document.getElementById('filterToTextTransform3');
-      var filterToTextTransform4Elem = document.getElementById('filterToTextTransform4');
-      var filterToTextTransform5Elem = document.getElementById('filterToTextTransform5');
-      var filterToTextTransform6Elem = document.getElementById('filterToTextTransform6');
-      filterToTextTransform1Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`);
-      filterToTextTransform2Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? I   am   a   programmer \n ! but i dont know`,'AllInitialLower');
-      filterToTextTransform3Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'InitialUpper');
-      filterToTextTransform4Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'InitialLower');
-      filterToTextTransform5Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'Upper');
-      filterToTextTransform6Elem.innerHTML = Filters.filterToTextTransform(`i   am   a   programmer  !but i dont know? i   am   a   programmer \n ! but i dont know`,'Lower');
+      var filterToSort1Elem = document.getElementById('filterToSort1');
+      var filterToSort2Elem = document.getElementById('filterToSort2');
+      filterToSort1Elem.innerHTML = JSON.stringify(
+        Filters.filterToSort([2, 1, 3])
+      );
+      filterToSort2Elem.innerHTML = JSON.stringify(
+        Filters.filterToSort(
+          [{ order: 2 }, { order: 3 }, { order: 1 }],
+          'descending',
+          'order'
+        )
+      );
     };
   </script>
 </html>

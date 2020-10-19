@@ -64,6 +64,16 @@
 | data | /               | 中英文字符串                                                 | 接收的数据         |
 | type | AllInitialUpper | AllInitialUpper[全部首字母大写]、AllInitialLower[全部首字母小写]、InitialUpper[所有句子首字母大写]、InitialLower[所有句子首字母小写]、Upper[全部大写]、Lower[全部小写] | 通知过滤器转换方式 |
 
+7.filterToSort
+
+| 参数     | 默认值    | 可取值                | 含义                                        |
+| -------- | --------- | --------------------- | ------------------------------------------- |
+| data     | /         | 一定格式的数组        | 接收的数据                                  |
+| sortType | ascending | ascending/descending  | ascending升序/descending降序                |
+| key      | /         | data里面元素对象的key | 当data里面的元素是对象的时候，就需要设置key |
+
+
+
 ### 三、导入及初始化
 
 1.可以在vue中作为过滤器使用

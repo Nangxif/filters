@@ -123,7 +123,7 @@ function filterToTextTransform(data, type = 'AllInitialUpper') {
   if (type === 'AllInitialUpper' || type === 'AllInitialLower') {
     result = strArray.reduce((total, item) => {
       if (item[0] !== undefined) {
-        if (symbol.includes(item[0])&&item[1]) {
+        if (symbol.includes(item[0]) && item[1]) {
           return `${total}${item[0]}${
             type == 'AllInitialUpper'
               ? item[1].toUpperCase()
@@ -158,11 +158,42 @@ function filterToTextTransform(data, type = 'AllInitialUpper') {
   return result.trim();
 }
 
+/**
+ * 数组排序
+ * ascending,descending
+ */
+function filterToSort(data, sortType = 'ascending', key) {
+  let dataCopy;
+  dataCopy = [...data];
+  if (key !== undefined) {
+    if (sortType === 'ascending') {
+      return dataCopy.sort(function (a, b) {
+        return a[key] - b[key];
+      });
+    } else {
+      return dataCopy.sort(function (a, b) {
+        return b[key] - a[key];
+      });
+    }
+  } else {
+    if (sortType === 'ascending') {
+      return dataCopy.sort(function (a, b) {
+        return a - b;
+      });
+    } else {
+      return dataCopy.sort(function (a, b) {
+        return b - a;
+      });
+    }
+  }
+}
+
 export default {
   filterToDateAndTime,
   filterToDecimal,
   filterToSystem,
   filterToSeparation,
   filterToHide,
-  filterToTextTransform
+  filterToTextTransform,
+  filterToSort
 };
