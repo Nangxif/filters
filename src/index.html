@@ -6,15 +6,15 @@
     <title>filter Demo</title>
   </head>
   <body>
-    <h2>filterToDateAndTime过滤器</h2>
-    <h3>filterToDateAndTime[默认参数]</h3>
-    <div id="filterToDateAndTime1"></div>
-    <h3>filterToDateAndTime['Date','/']</h3>
-    <div id="filterToDateAndTime2"></div>
-    <h3>filterToDateAndTime['Time']</h3>
-    <div id="filterToDateAndTime3"></div>
-    <h3>filterToDateAndTime['Week']</h3>
-    <div id="filterToDateAndTime4"></div>
+    <h2>filterToYMDT过滤器</h2>
+    <h3>filterToYMDT[默认参数]</h3>
+    <div id="filterToYMDT1"></div>
+    <h3>filterToYMDT['YM','/']</h3>
+    <div id="filterToYMDT2"></div>
+    <h3>filterToYMDT['YMD']</h3>
+    <div id="filterToYMDT3"></div>
+    <h3>filterToYMDT['LYMD']</h3>
+    <div id="filterToYMDT4"></div>
     <h2>filterToDecimal过滤器</h2>
     <h3>filterToDecimal[0.05102,默认参数]</h3>
     <div id="filterToDecimal1"></div>
@@ -75,34 +75,15 @@
   </body>
   <script>
     window.onload = function () {
-      var filterToDateAndTimeElem1 = document.getElementById(
-        'filterToDateAndTime1'
-      );
-      var filterToDateAndTimeElem2 = document.getElementById(
-        'filterToDateAndTime2'
-      );
-      var filterToDateAndTimeElem3 = document.getElementById(
-        'filterToDateAndTime3'
-      );
-      var filterToDateAndTimeElem4 = document.getElementById(
-        'filterToDateAndTime4'
-      );
-      filterToDateAndTimeElem1.innerHTML = Filters.filterToDateAndTime(
-        new Date()
-      );
-      filterToDateAndTimeElem2.innerHTML = Filters.filterToDateAndTime(
-        new Date(),
-        'Date',
-        '/'
-      );
-      filterToDateAndTimeElem3.innerHTML = Filters.filterToDateAndTime(
-        new Date(),
-        'Time'
-      );
-      filterToDateAndTimeElem4.innerHTML = Filters.filterToDateAndTime(
-        new Date(),
-        'Week'
-      );
+      var filterToYMDTElem1 = document.getElementById('filterToYMDT1');
+      var filterToYMDTElem2 = document.getElementById('filterToYMDT2');
+      var filterToYMDTElem3 = document.getElementById('filterToYMDT3');
+      var filterToYMDTElem4 = document.getElementById('filterToYMDT4');
+      filterToYMDTElem1.innerHTML = Filters.filterToYMDT(new Date());
+      filterToYMDTElem2.innerHTML = Filters.filterToYMDT(new Date(), 'YM', '/');
+
+      filterToYMDTElem3.innerHTML = Filters.filterToYMDT(new Date(), 'YMD');
+      filterToYMDTElem4.innerHTML = Filters.filterToYMDT(new Date(), 'LYMD');
 
       var filterToDecimalElem1 = document.getElementById('filterToDecimal1');
       var filterToDecimalElem2 = document.getElementById('filterToDecimal2');

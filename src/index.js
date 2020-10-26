@@ -1,27 +1,49 @@
-function filterToDateAndTime(data, type = 'DateAndTime', separator = '-') {
+function filterToYMDT(data, type = 'YMDT', separator = '-', hasZero = true) {
   let date = new Date(data);
-  let dateTime = `${date.getFullYear()}${separator}${
-    date.getMonth() + 1
-  }${separator}${date.getDate()}`;
+  // 年
+  let Y = date.getFullYear();
+  // 月
+  let M = date.getMonth() + 1;
+  // 日
+  let D = date.getDate();
   let hour = `${
-    date.getHours() >= 10 ? date.getHours() : '0' + date.getHours()
+    hasZero
+      ? date.getHours() >= 10
+        ? date.getHours()
+        : '0' + date.getHours()
+      : date.getHours()
   }`;
   let minute = `${
-    date.getMinutes() >= 10 ? date.getMinutes() : '0' + date.getMinutes()
+    hasZero
+      ? date.getMinutes() >= 10
+        ? date.getMinutes()
+        : '0' + date.getMinutes()
+      : date.getMinutes()
   }`;
   let second = `${
-    date.getSeconds() >= 10 ? date.getSeconds() : '0' + date.getSeconds()
+    hasZero
+      ? date.getSeconds() >= 10
+        ? date.getSeconds()
+        : '0' + date.getSeconds()
+      : date.getSeconds()
   }`;
-  if (type === 'Date') {
-    return `${dateTime}`;
-  } else if (type === 'Time') {
-    return `${hour}:${minute}:${second}`;
-  } else if (type === 'Week') {
-    return ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][
-      date.getDay()
-    ];
-  } else {
-    return `${dateTime} ${hour}:${minute}:${second}`;
+  switch (type) {
+    case 'YM':
+      return `${Y}${separator}${M}`;
+    case 'LYM':
+      return `${Y}年${M}月`;
+    case 'YMD':
+      return `${Y}${separator}${M}${separator}${D}`;
+    case 'LYMD':
+      return `${Y}年${M}月${D}日`;
+    case 'YMDT':
+      return `${Y}${separator}${M}${separator}${D} ${hour}:${minute}:${second}`;
+    case 'LYMDT':
+      return `${Y}年${M}月${D}日 ${hour}:${minute}:${second}`;
+    case 'WEEK':
+      return ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][
+        date.getDay()
+      ];
   }
 }
 // count最多保留几位小数
@@ -189,7 +211,7 @@ function filterToSort(data, sortType = 'ascending', key) {
 }
 
 export default {
-  filterToDateAndTime,
+  filterToYMDT,
   filterToDecimal,
   filterToSystem,
   filterToSeparation,

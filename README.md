@@ -6,7 +6,7 @@
 
 | 过滤器                | 作用                                                         |
 | --------------------- | ------------------------------------------------------------ |
-| filterToDateAndTime   | 将时间转换成规定格式                                         |
+| filterToYMDT          | 将时间转换成规定格式                                         |
 | filterToDecimal       | 最多保留几位小数                                             |
 | filterToSystem        | 简单的进制转换                                               |
 | filterToSeparation    | 规定固定位置用自定义分隔号隔开，用于分隔电话号码以及银行卡号等 |
@@ -15,13 +15,14 @@
 
 ### 二、各自的用法
 
-1.filterToDateAndTime
+1.filterToYMDT
 
-| 参数      | 默认值      | 可取值                     | 含义                 |
-| --------- | ----------- | -------------------------- | -------------------- |
-| data      | /           | 时间                       | 接收的数据           |
-| type      | DateAndTime | DateAndTime、Date、Time    | 转换的类型           |
-| separator | -           | 自定义的分隔字符或者字符串 | 用于分隔日期的分隔符 |
+| 参数      | 默认值 | 可取值                                | 含义                     |
+| --------- | ------ | ------------------------------------- | ------------------------ |
+| data      | /      | 时间                                  | 接收的数据               |
+| type      | YMDT   | YMDT、LYMDT、YM、LYM、YMD、LYMD、WEEK | 转换的类型               |
+| separator | -      | 自定义的分隔字符或者字符串            | 用于分隔日期的分隔符     |
+| hasZero   | true   | false/true                            | 时分秒需不需要保持两位数 |
 
 2.filterToDecimal
 

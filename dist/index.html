@@ -1,104 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>filter Demo</title>
-  </head>
-  <body>
-    <h2>filterToDateAndTime过滤器</h2>
-    <h3>filterToDateAndTime[默认参数]</h3>
-    <div id="filterToDateAndTime1"></div>
-    <h3>filterToDateAndTime['Date','/']</h3>
-    <div id="filterToDateAndTime2"></div>
-    <h3>filterToDateAndTime['Time']</h3>
-    <div id="filterToDateAndTime3"></div>
-    <h3>filterToDateAndTime['Week']</h3>
-    <div id="filterToDateAndTime4"></div>
-    <h2>filterToDecimal过滤器</h2>
-    <h3>filterToDecimal[0.05102,默认参数]</h3>
-    <div id="filterToDecimal1"></div>
-    <h3>filterToDecimal[0.05102,2]</h3>
-    <div id="filterToDecimal2"></div>
-    <h3>filterToDecimal[0.05102,3]</h3>
-    <div id="filterToDecimal3"></div>
-    <h3>filterToDecimal[0.05102,4]</h3>
-    <div id="filterToDecimal4"></div>
-    <h3>filterToDecimal[0.05102,5]</h3>
-    <div id="filterToDecimal5"></div>
-    <h3>filterToDecimal[0.05102,6]</h3>
-    <div id="filterToDecimal6"></div>
-    <h2>filterToSystem过滤器</h2>
-    <h3>filterToSystem[100,默认参数]</h3>
-    <div id="filterToSystem1"></div>
-    <h3>filterToSystem[999,默认参数]</h3>
-    <div id="filterToSystem2"></div>
-    <h3>filterToSystem[1000,默认参数]</h3>
-    <div id="filterToSystem3"></div>
-    <h3>filterToSystem[99,'cm','m',100]</h3>
-    <div id="filterToSystem4"></div>
-    <h3>filterToSystem[100,'cm','m',100]</h3>
-    <div id="filterToSystem5"></div>
-    <h2>filterToSeparation过滤器</h2>
-    <h3>filterToSeparation[1000000,默认参数]</h3>
-    <div id="filterToSeparation1"></div>
-    <h3>filterToSeparation[1000000,2,'-']</h3>
-    <div id="filterToSeparation2"></div>
-    <h2>filterToHide过滤器</h2>
-    <h3>filterToHide[1000000,2,4,默认参数]</h3>
-    <div id="filterToHide1"></div>
-    <h3>filterToHide[1000000,2,4,'#']</h3>
-    <div id="filterToHide2"></div>
-    <h2>filterToTextTransform过滤器</h2>
-    <h3>filterToTextTransform[默认参数]</h3>
-    <div id="filterToTextTransform1"></div>
-    <h3>filterToTextTransform[AllInitialLower]</h3>
-    <div id="filterToTextTransform2"></div>
-    <h3>filterToTextTransform[InitialUpper]</h3>
-    <div id="filterToTextTransform3"></div>
-    <h3>filterToTextTransform[InitialLower]</h3>
-    <div id="filterToTextTransform4"></div>
-    <h3>filterToTextTransform[Upper]</h3>
-    <div id="filterToTextTransform5"></div>
-    <h3>filterToTextTransform[Lower]</h3>
-    <div id="filterToTextTransform6"></div>
-    <h2>filterToSort过滤器</h2>
-    <h3>filterToSort[[2,1,3],默认参数]</h3>
-    <div id="filterToSort1"></div>
-    <h3>filterToSort[[{order:2},{order:3},{order:1}],'descending','order']</h3>
-    <div id="filterToSort2"></div>
-    <script src="./filters.min.js"></script>
-  </body>
-  <script>
-    window.onload = function () {
-      var filterToDateAndTimeElem1 = document.getElementById(
-        'filterToDateAndTime1'
-      );
-      var filterToDateAndTimeElem2 = document.getElementById(
-        'filterToDateAndTime2'
-      );
-      var filterToDateAndTimeElem3 = document.getElementById(
-        'filterToDateAndTime3'
-      );
-      var filterToDateAndTimeElem4 = document.getElementById(
-        'filterToDateAndTime4'
-      );
-      filterToDateAndTimeElem1.innerHTML = Filters.filterToDateAndTime(
-        new Date()
-      );
-      filterToDateAndTimeElem2.innerHTML = Filters.filterToDateAndTime(
-        new Date(),
-        'Date',
-        '/'
-      );
-      filterToDateAndTimeElem3.innerHTML = Filters.filterToDateAndTime(
-        new Date(),
-        'Time'
-      );
-      filterToDateAndTimeElem4.innerHTML = Filters.filterToDateAndTime(
-        new Date(),
-        'Week'
-      );
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>filter Demo</title></head><body><h2>filterToYMDT过滤器</h2><h3>filterToYMDT[默认参数]</h3><div id="filterToYMDT1"></div><h3>filterToYMDT['YM','/']</h3><div id="filterToYMDT2"></div><h3>filterToYMDT['YMD']</h3><div id="filterToYMDT3"></div><h3>filterToYMDT['LYMD']</h3><div id="filterToYMDT4"></div><h2>filterToDecimal过滤器</h2><h3>filterToDecimal[0.05102,默认参数]</h3><div id="filterToDecimal1"></div><h3>filterToDecimal[0.05102,2]</h3><div id="filterToDecimal2"></div><h3>filterToDecimal[0.05102,3]</h3><div id="filterToDecimal3"></div><h3>filterToDecimal[0.05102,4]</h3><div id="filterToDecimal4"></div><h3>filterToDecimal[0.05102,5]</h3><div id="filterToDecimal5"></div><h3>filterToDecimal[0.05102,6]</h3><div id="filterToDecimal6"></div><h2>filterToSystem过滤器</h2><h3>filterToSystem[100,默认参数]</h3><div id="filterToSystem1"></div><h3>filterToSystem[999,默认参数]</h3><div id="filterToSystem2"></div><h3>filterToSystem[1000,默认参数]</h3><div id="filterToSystem3"></div><h3>filterToSystem[99,'cm','m',100]</h3><div id="filterToSystem4"></div><h3>filterToSystem[100,'cm','m',100]</h3><div id="filterToSystem5"></div><h2>filterToSeparation过滤器</h2><h3>filterToSeparation[1000000,默认参数]</h3><div id="filterToSeparation1"></div><h3>filterToSeparation[1000000,2,'-']</h3><div id="filterToSeparation2"></div><h2>filterToHide过滤器</h2><h3>filterToHide[1000000,2,4,默认参数]</h3><div id="filterToHide1"></div><h3>filterToHide[1000000,2,4,'#']</h3><div id="filterToHide2"></div><h2>filterToTextTransform过滤器</h2><h3>filterToTextTransform[默认参数]</h3><div id="filterToTextTransform1"></div><h3>filterToTextTransform[AllInitialLower]</h3><div id="filterToTextTransform2"></div><h3>filterToTextTransform[InitialUpper]</h3><div id="filterToTextTransform3"></div><h3>filterToTextTransform[InitialLower]</h3><div id="filterToTextTransform4"></div><h3>filterToTextTransform[Upper]</h3><div id="filterToTextTransform5"></div><h3>filterToTextTransform[Lower]</h3><div id="filterToTextTransform6"></div><h2>filterToSort过滤器</h2><h3>filterToSort[[2,1,3],默认参数]</h3><div id="filterToSort1"></div><h3>filterToSort[[{order:2},{order:3},{order:1}],'descending','order']</h3><div id="filterToSort2"></div><script src="../dist/filters.min.js"></script></body><script>window.onload = function () {
+      var filterToYMDTElem1 = document.getElementById('filterToYMDT1');
+      var filterToYMDTElem2 = document.getElementById('filterToYMDT2');
+      var filterToYMDTElem3 = document.getElementById('filterToYMDT3');
+      var filterToYMDTElem4 = document.getElementById('filterToYMDT4');
+      filterToYMDTElem1.innerHTML = Filters.filterToYMDT(new Date());
+      filterToYMDTElem2.innerHTML = Filters.filterToYMDT(new Date(), 'YM', '/');
+
+      filterToYMDTElem3.innerHTML = Filters.filterToYMDT(new Date(), 'YMD');
+      filterToYMDTElem4.innerHTML = Filters.filterToYMDT(new Date(), 'LYMD');
 
       var filterToDecimalElem1 = document.getElementById('filterToDecimal1');
       var filterToDecimalElem2 = document.getElementById('filterToDecimal2');
@@ -206,6 +115,4 @@
           'order'
         )
       );
-    };
-  </script>
-</html>
+    };</script></html>
