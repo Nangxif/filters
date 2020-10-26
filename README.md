@@ -20,7 +20,7 @@
 | 参数      | 默认值 | 可取值                                | 含义                     |
 | --------- | ------ | ------------------------------------- | ------------------------ |
 | data      | /      | 时间                                  | 接收的数据               |
-| type      | YMDT   | YMDT、LYMDT、YM、LYM、YMD、LYMD、WEEK | 转换的类型               |
+| type      | YMDT   | YMDT、LYMDT、YM、LYM、MD、LMD、YMD、LYMD、WEEK | 转换的类型               |
 | separator | -      | 自定义的分隔字符或者字符串            | 用于分隔日期的分隔符     |
 | hasZero   | true   | false/true                            | 时分秒需不需要保持两位数 |
 
