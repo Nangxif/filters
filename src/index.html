@@ -15,6 +15,10 @@
     <div id="filterToYMDT3"></div>
     <h3>filterToYMDT['LYMD']</h3>
     <div id="filterToYMDT4"></div>
+    <h3>filterToYMDT['MD']</h3>
+    <div id="filterToYMDT5"></div>
+    <h3>filterToYMDT['LMD']</h3>
+    <div id="filterToYMDT6"></div>
     <h2>filterToDecimal过滤器</h2>
     <h3>filterToDecimal[0.05102,默认参数]</h3>
     <div id="filterToDecimal1"></div>
@@ -79,11 +83,16 @@
       var filterToYMDTElem2 = document.getElementById('filterToYMDT2');
       var filterToYMDTElem3 = document.getElementById('filterToYMDT3');
       var filterToYMDTElem4 = document.getElementById('filterToYMDT4');
+      var filterToYMDTElem5 = document.getElementById('filterToYMDT5');
+      var filterToYMDTElem6 = document.getElementById('filterToYMDT6');
       filterToYMDTElem1.innerHTML = Filters.filterToYMDT(new Date());
       filterToYMDTElem2.innerHTML = Filters.filterToYMDT(new Date(), 'YM', '/');
 
       filterToYMDTElem3.innerHTML = Filters.filterToYMDT(new Date(), 'YMD');
       filterToYMDTElem4.innerHTML = Filters.filterToYMDT(new Date(), 'LYMD');
+
+      filterToYMDTElem5.innerHTML = Filters.filterToYMDT(new Date(), 'MD');
+      filterToYMDTElem6.innerHTML = Filters.filterToYMDT(new Date(), 'LMD');
 
       var filterToDecimalElem1 = document.getElementById('filterToDecimal1');
       var filterToDecimalElem2 = document.getElementById('filterToDecimal2');

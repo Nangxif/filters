@@ -4,14 +4,14 @@
 
 ### 一、包含的过滤器
 
-| 过滤器                | 作用                                                         |
-| --------------------- | ------------------------------------------------------------ |
-| filterToYMDT          | 将时间转换成规定格式                                         |
-| filterToDecimal       | 最多保留几位小数                                             |
-| filterToSystem        | 简单的进制转换                                               |
-| filterToSeparation    | 规定固定位置用自定义分隔号隔开，用于分隔电话号码以及银行卡号等 |
-| filterToHide          | 转换自定义位置字符                                           |
-| filterToTextTransform | 转换大小写，包括全部大小写，首字母大小写等，可兼容多句子     |
+| 过滤器                                | 作用                                                         |
+| ------------------------------------- | ------------------------------------------------------------ |
+| filterToYMDT（原filterToDateAndTime） | 将时间转换成规定格式                                         |
+| filterToDecimal                       | 最多保留几位小数                                             |
+| filterToSystem                        | 简单的进制转换                                               |
+| filterToSeparation                    | 规定固定位置用自定义分隔号隔开，用于分隔电话号码以及银行卡号等 |
+| filterToHide                          | 转换自定义位置字符                                           |
+| filterToTextTransform                 | 转换大小写，包括全部大小写，首字母大小写等，可兼容多句子     |
 
 ### 二、各自的用法
 
@@ -20,7 +20,7 @@
 | 参数      | 默认值 | 可取值                                | 含义                     |
 | --------- | ------ | ------------------------------------- | ------------------------ |
 | data      | /      | 时间                                  | 接收的数据               |
-| type      | YMDT   | YMDT、LYMDT、YM、LYM、MD、LMD、YMD、LYMD、WEEK | 转换的类型               |
+| type      | YMDT   | YMDT（年月日时间）、LYMDT（中文格式的年月日时间）、YM、LYM、MD、LMD、YMD、LYMD、WEEK | 转换的类型（L:local，Y：Year，M：Month，D:Date，T：Time） |
 | separator | -      | 自定义的分隔字符或者字符串            | 用于分隔日期的分隔符     |
 | hasZero   | true   | false/true                            | 时分秒需不需要保持两位数 |
 

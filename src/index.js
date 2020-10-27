@@ -37,7 +37,7 @@ function filterToYMDT(data, type = 'YMDT', separator = '-', hasZero = true) {
     case 'LYMD':
       return `${Y}年${M}月${D}日`;
     case 'MD':
-      return `${M}${separator}${D}${separator}`;
+      return `${M}${separator}${D}`;
     case 'LMD':
       return `${M}月${D}日`;
     case 'YMDT':
