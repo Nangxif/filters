@@ -12,6 +12,7 @@
 | filterToSeparation                    | 规定固定位置用自定义分隔号隔开，用于分隔电话号码以及银行卡号等 |
 | filterToHide                          | 转换自定义位置字符                                           |
 | filterToTextTransform                 | 转换大小写，包括全部大小写，首字母大小写等，可兼容多句子     |
+| filterToSort                          | 对数组进行排序                                               |
 
 ### 二、各自的用法
 
